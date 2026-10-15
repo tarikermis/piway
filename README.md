@@ -54,6 +54,16 @@ To change settings, copy `deploy/config.example.yaml` to
 [docs/CONFIG.md](docs/CONFIG.md) for the full list, the `PIWAY_*` environment
 variables, and the precedence rules.
 
+## Check an installation
+
+```sh
+piway doctor                                # service, Docker, Caddy, disk, clock…
+sudo ~/.local/bin/piway doctor --security   # the steps in docs/HARDENING.md
+```
+
+Each problem comes with the command that fixes it. `-json` prints the
+results for scripts; the exit status is 1 when a check fails.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the issue, branch, commit
